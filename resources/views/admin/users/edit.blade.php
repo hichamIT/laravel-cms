@@ -77,6 +77,13 @@
 
     {!! Form::close() !!}
 
+
+        {!! Form::open(['method' => 'DELETE','action' => ['AdminUsersController@destroy',$user->id] , 'files' => true]) !!}
+
+        <div class="form-group">
+            {!! Form::submit('Delete',['class' => 'btn btn-danger']) !!}
+        </div>
+        {!! Form::close() !!}
     </div>
 @endsection
 
