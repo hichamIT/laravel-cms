@@ -4,7 +4,7 @@
 
     <h1>Create User</h1>
 
-    {!! Form::open(['method' => 'POST','action' => 'AdminUsersController@store']) !!}
+    {!! Form::open(['method' => 'POST','action' => 'AdminUsersController@store' , 'files' => true]) !!}
 
         <div class="form-group">
             {!! Form::label('name', 'Name : ') !!}
@@ -47,12 +47,12 @@
             @endif
 
         <div class="form-group">
-            {!! Form::label('file', 'Photo : ') !!}
-            {!! Form::file('file',null , ['class' => 'form-control']) !!}
+            {!! Form::label('photo_id', 'Photo : ') !!}
+            {!! Form::file('photo_id', null , ['class' => 'form-control']) !!}
         </div>
-            @if ($errors->has('file'))
+            @if ($errors->has('photo_id'))
                 <span class="help-block">
-                    <strong>{{ $errors->first('file') }}</strong>
+                    <strong>{{ $errors->first('photo_id') }}</strong>
                 </span>
             @endif
 
