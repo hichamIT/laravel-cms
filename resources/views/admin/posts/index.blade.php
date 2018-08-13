@@ -24,7 +24,7 @@
                     <th>{{$post->id}}</th>
                     <th>{{$post->user->name}}</th>
                     <th><img src="{{$post->photo ? $post->photo->file : 'http://via.placeholder.com/50x50' }}"  height="50" width="50"></th>
-                    <th>{{$post->category_id}}</th>
+                    <th>{{$post->category ? $post->category->name : 'uncategorized'}}</th>
                     <th>{{$post->title}}</th>
                     <th>{{$post->body}}</th>
                     <th>{{$post->created_at->diffForHumans()}}</th>
