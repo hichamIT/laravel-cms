@@ -24,11 +24,11 @@ class PostCreateRequest extends Request
     public function rules()
     {
         return array(
-     /*       'title' => 'required',
+            'title' => 'required',
             'category_id' => 'required',
             'photo_id' => 'required',
             'body' => 'required',
-*/
+
         );
     }
 }
