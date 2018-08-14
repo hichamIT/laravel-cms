@@ -15,15 +15,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/admin', function () {
-    return view('admin.index');
-});
 
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
 
+Route::get('/post/{id}',['as'=>'post.home','uses'=>'AdminPostsController@post']);
+
 Route::group(['middleware' => 'admin'] , function (){
+
+
+    Route::get('/admin', function () {
+        return view('admin.index');
+    });
 
     Route::resource('admin/users','AdminUsersController');
 

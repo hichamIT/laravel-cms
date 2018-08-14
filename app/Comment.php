@@ -20,4 +20,9 @@ class Comment extends Model
     {
        return $this->hasMany('App\Replie');
     }
+
+    public function post(){
+
+        return $this->belongsTo('App\Post');
+    }
 }
